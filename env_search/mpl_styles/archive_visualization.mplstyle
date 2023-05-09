@@ -1,0 +1,31 @@
+# Style for archive visualizations. See
+# https://matplotlib.org/stable/tutorials/introductory/customizing.html
+
+font.family: Times New Roman
+
+# Font sizes.
+font.size: 9.0
+axes.labelsize: medium
+axes.titlesize: medium
+xtick.labelsize: medium
+ytick.labelsize: medium
+
+mathtext.fontset: cm
+
+axes.facecolor: white
+axes.grid: False
+
+# Line widths.
+axes.linewidth: 0.3
+xtick.major.width: 0.3
+xtick.minor.width: 0.3
+ytick.major.width: 0.3
+ytick.minor.width: 0.3
+lines.linewidth: 1.5
+
+xtick.direction: out
+ytick.direction: out
+
+legend.fancybox: False
+legend.frameon: True
+legend.loc: best

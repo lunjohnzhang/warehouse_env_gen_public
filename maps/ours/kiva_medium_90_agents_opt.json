@@ -1,0 +1,28 @@
+{
+    "name": "kiva_medium_90_agents_opt",
+    "weight": false,
+    "n_row": 17,
+    "n_col": 16,
+    "n_endpoint": 70,
+    "n_agent_loc": 0,
+    "maxtime": 5000,
+    "layout": [
+        ".....ee@@e......",
+        "w.@e.@.eee@@e@.w",
+        "..ee.e....ee.e..",
+        "..e@e@e.e..@.@..",
+        "w..e....@e.e.e.w",
+        "....e.e.ee......",
+        "...e@e@.e@e.e...",
+        "w..e@e....e@@e.w",
+        "........e.@e@e..",
+        "..e@..e@@ee.....",
+        "w..e...ee.@@e..w",
+        "..e@@e..@.ee....",
+        "...ee...e.e@e...",
+        "w.e@@e@e..@....w",
+        ".....e@e@.e.e...",
+        "..e.....e...@e..",
+        "..@e@e...e@e@e.."
+    ]
+}

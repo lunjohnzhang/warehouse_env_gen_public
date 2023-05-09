@@ -1,0 +1,28 @@
+{
+    "name": "kiva_medium_2x2_w_mode",
+    "weight": false,
+    "n_row": 17,
+    "n_col": 16,
+    "n_endpoint": 80,
+    "n_agent_loc": 80,
+    "maxtime": 5000,
+    "layout": [
+        "................",
+        "w.eeeee..eeeee.w",
+        "..@@@@@..@@@@@..",
+        "..eeeee..eeeee..",
+        "w..............w",
+        "..eeeee..eeeee..",
+        "..@@@@@..@@@@@..",
+        "w.eeeee..eeeee.w",
+        "................",
+        "..eeeee..eeeee..",
+        "w.@@@@@..@@@@@.w",
+        "..eeeee..eeeee..",
+        "................",
+        "w.eeeee..eeeee.w",
+        "..@@@@@..@@@@@..",
+        "..eeeee..eeeee..",
+        "................"
+    ]
+}

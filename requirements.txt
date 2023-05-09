@@ -1,0 +1,26 @@
+numpy==1.21.4
+tqdm
+fire==0.4.0
+gin-config==0.4.0
+logdir==0.12.0
+ribs[all]==0.4.0
+
+# Pytorch
+-f https://download.pytorch.org/whl/cu117/torch_stable.html
+torch==1.13.0+cu117
+torchvision==0.14.0+cu117
+torchaudio==0.13.0+cu117
+
+# Dask
+dask==2.30.0
+dask-jobqueue==0.7.1
+distributed==2.30.0
+click==7.1.2  # Newer click causes error with dask scheduler.
+bokeh==2.2.3
+jupyter-server-proxy==1.5.0
+
+# Plot
+matplotlib==3.4.2
+seaborn==0.12.0
+loguru==0.5.3
+pingouin==0.4.0

@@ -1,0 +1,20 @@
+{
+    "name": "kiva_small_60_agents_opt_unrepaired_no_workstation",
+    "weight": false,
+    "n_row": 9,
+    "n_col": 16,
+    "n_endpoint": 37,
+    "n_agent_loc": 0,
+    "maxtime": 5000,
+    "layout": [
+        ".ee.e@.e.@..",
+        ".@ee.ee.e.e.",
+        "e..ee..e.@@@",
+        "@ee.e.ee.ee.",
+        "eee@ee@@@@.@",
+        "@@e.e@.ee..@",
+        ".eeee.@@.@.e",
+        "e..eeeee@...",
+        "e@e@e@@..@@@"
+    ]
+}

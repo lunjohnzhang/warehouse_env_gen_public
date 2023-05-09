@@ -1,0 +1,90 @@
+Bootstrap: docker
+
+From: python:3.8.11-buster
+
+%files
+    setup.py /usr/project/setup.py
+    pybind11/ /usr/project/pybind11
+    RHCR/ /usr/project/RHCR
+    CMakeLists.txt /usr/project/CMakeLists.txt
+    boost_1_71_0.tar.gz /usr/project/boost_1_71_0.tar.gz
+    requirements.txt /usr/project/requirements.txt
+    CPLEX_Studio2210 /usr/project/CPLEX_Studio2210
+    dask_config.yml /etc/dask/dask_config.yml
+
+%runscript
+    echo "This is what happens when you run the container..."
+
+%post
+    echo "Hello from inside the container"
+
+    apt-get update
+    apt-get install -y \
+        wget \
+        git \
+        zip \
+        unzip \
+        sudo \
+        cmake \
+        tar \
+        libgl1-mesa-dev \
+        libgl1-mesa-glx \
+        mesa-utils \
+        libglew-dev \
+        libosmesa6-dev \
+        patchelf \
+        ffmpeg \
+        whiptail
+    apt-get clean
+    rm -rf /var/lib/apt/lists/*
+
+    # Microsoft fonts (particularly Times)
+    # https://stackoverflow.com/questions/60934639/install-fonts-in-linux-container-for-asp-net-core#62888227
+    # sed -i'.bak' 's/$/ contrib/' /etc/apt/sources.list
+    apt-get update
+    apt-get install -y fontconfig fonts-liberation
+    fc-cache -f -v
+
+    # Project
+    PROJECT_ROOT=/usr/project
+    mkdir -p $PROJECT_ROOT
+
+    # Python
+    cd $PROJECT_ROOT
+    pip3 install -r requirements.txt
+
+    # CPLEX
+    python $PROJECT_ROOT/CPLEX_Studio2210/python/setup.py install
+
+    # Boost
+    tar -zxvf boost_1_71_0.tar.gz > unzip_boost.out
+    cd boost_1_71_0
+    # get the no of cpucores to make faster
+    cpuCores=`cat /proc/cpuinfo | grep "cpu cores" | uniq | awk '{print $NF}'`
+    echo "Available CPU cores: "$cpuCores
+    ./bootstrap.sh  # this will generate ./b2 > booststrap_boost.out
+    echo "Installing Boost from source..."
+    sudo ./b2 --with=all -j $cpuCores install > install_boost.out
+
+
+%environment
+    export PROJECT_ROOT=/usr/project
+
+    # Set X11 display for GUI output
+    export DISPLAY=":1"
+
+    # Set numpy to be single-threaded
+    export OPENBLAS_NUM_THREADS=1
+
+    # Detect package
+    export PYTHONPATH=$PROJECT_ROOT:$PYTHONPATH
+    export PYTHONPATH=$PROJECT_ROOT/pybind11:$PYTHONPATH
+
+    # Trim memory aggressively
+    # https://github.com/dask/distributed/issues/5279
+    export MALLOC_TRIM_THRESHOLD_=0
+
+%runscript
+    cd $PROJECT_ROOT
+    cmake .
+    make

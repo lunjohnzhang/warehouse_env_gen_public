@@ -1,0 +1,20 @@
+{
+    "name": "kiva_small_RHCR_w_60_agents_opt_dsage",
+    "weight": false,
+    "n_row": 9,
+    "n_col": 16,
+    "n_endpoint": 45,
+    "n_agent_loc": 0,
+    "maxtime": 5000,
+    "layout": [
+        "....eee.....ee..",
+        "w..e@@@@e..e@@.w",
+        "....eeeee....e..",
+        "...eeeee@eeee...",
+        "w.e@@@@eee@@@e.w",
+        "...eeee....e....",
+        "..eee.....e.e...",
+        "w.@@@e..@e@.@e.w",
+        "..eee...e......."
+    ]
+}

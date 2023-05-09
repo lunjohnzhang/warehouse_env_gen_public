@@ -1,0 +1,28 @@
+{
+    "name": "kiva_small_r_mode",
+    "weight": false,
+    "n_row": 17,
+    "n_col": 20,
+    "n_endpoint": 40,
+    "n_agent_loc": 88,
+    "maxtime": 1000,
+    "layout": [
+        "....................",
+        ".rrrrrrrr..rrrrrrrr.",
+        ".rrrrrrrr..rrrrrrrr.",
+        "....................",
+        "....................",
+        ".rr.eeeee..eeeee.rr.",
+        ".rr.@@@@@..@@@@@.rr.",
+        ".rr.eeeee..eeeee.rr.",
+        "....................",
+        ".rr.eeeee..eeeee.rr.",
+        ".rr.@@@@@..@@@@@.rr.",
+        ".rr.eeeee..eeeee.rr.",
+        "....................",
+        "....................",
+        ".rrrrrrrr..rrrrrrrr.",
+        ".rrrrrrrr..rrrrrrrr.",
+        "...................."
+    ]
+}

@@ -1,0 +1,121 @@
+# Macros:
+# ======================================================================================================================
+max_n_shelf = 40
+measure_dim = 2
+min_n_shelf = 40
+num_objects = 3
+sigma0 = 0.2
+
+# Parameters for experiment:
+# ======================================================================================================================
+experiment.name = 'Warehouse Generation'
+
+# Parameters for GridArchive:
+# ======================================================================================================================
+GridArchive.dims = [30, 100]
+GridArchive.ranges = [[10, 40], [12, 18]]
+
+# Parameters for downsample/GridArchive:
+# ======================================================================================================================
+downsample/GridArchive.dims = [15, 25]
+downsample/GridArchive.ranges = [[10, 40], [12, 18]]
+
+# Parameters for Manager:
+# ======================================================================================================================
+Manager.archive_save_freq = -1
+Manager.archive_type = @GridArchive
+Manager.downsample_archive_type = @downsample/GridArchive
+Manager.downsample_em = True
+Manager.emitter_types = [(@MapElitesBaselineEmitter, 5)]
+Manager.env_manager_class = @WarehouseManager
+Manager.initial_sols = 100
+Manager.inner_itrs = 50000
+Manager.is_em = True
+Manager.max_evals = 10000
+Manager.plot_metrics_freq = 1
+Manager.reload_save_freq = 1
+Manager.sol_size = 204
+
+# Parameters for MapElitesBaselineEmitter:
+# ======================================================================================================================
+MapElitesBaselineEmitter.batch_size = 10
+MapElitesBaselineEmitter.geometric_k = True
+MapElitesBaselineEmitter.initial_population = 20
+MapElitesBaselineEmitter.max_n_shelf = %max_n_shelf
+MapElitesBaselineEmitter.min_n_shelf = %min_n_shelf
+MapElitesBaselineEmitter.mutation_k = 10
+MapElitesBaselineEmitter.num_objects = %num_objects
+
+# Parameters for WarehouseAugResnetRepairedMapAndOccupancy:
+# ======================================================================================================================
+WarehouseAugResnetRepairedMapAndOccupancy.i_size = 32
+WarehouseAugResnetRepairedMapAndOccupancy.n_res_layers = 2
+WarehouseAugResnetRepairedMapAndOccupancy.nc = 4
+WarehouseAugResnetRepairedMapAndOccupancy.ndf = 64
+
+# Parameters for WarehouseConfig:
+# ======================================================================================================================
+WarehouseConfig.CAT = False
+WarehouseConfig.aggregation_type = 'mean'
+WarehouseConfig.cutoffTime = 60
+WarehouseConfig.dummy_paths = False
+WarehouseConfig.hamming_only = True
+WarehouseConfig.hold_endpoints = False
+WarehouseConfig.id = False
+WarehouseConfig.lazyP = False
+WarehouseConfig.log = False
+WarehouseConfig.measure_names = ['n_shelf_components', 'all_task_len_mean']
+WarehouseConfig.obj_type = 'throughput'
+WarehouseConfig.planning_window = 10
+WarehouseConfig.potential_function = 'NONE'
+WarehouseConfig.potential_threshold = 0
+WarehouseConfig.prioritize_start = True
+WarehouseConfig.robust = 0
+WarehouseConfig.rotation = False
+WarehouseConfig.save_heuristics_table = False
+WarehouseConfig.save_result = False
+WarehouseConfig.save_solver = False
+WarehouseConfig.scenario = 'KIVA'
+WarehouseConfig.screen = 0
+WarehouseConfig.simulation_time = 1000
+WarehouseConfig.simulation_window = 5
+WarehouseConfig.single_agent_solver = 'SIPP'
+WarehouseConfig.solver = 'PBS'
+WarehouseConfig.stop_at_traffic_jam = True
+WarehouseConfig.suboptimal_bound = 1
+WarehouseConfig.task = ''
+WarehouseConfig.test = False
+WarehouseConfig.travel_time_window = 0
+WarehouseConfig.use_warm_up = True
+
+# Parameters for WarehouseConvolutional:
+# ======================================================================================================================
+WarehouseConvolutional.head_dimensions = [1, 1, 1]
+WarehouseConvolutional.i_size = 32
+WarehouseConvolutional.n_extra_layers = 0
+WarehouseConvolutional.nc = 5
+WarehouseConvolutional.ndf = 64
+
+# Parameters for WarehouseEmulationModel:
+# ======================================================================================================================
+WarehouseEmulationModel.network_type = @WarehouseConvolutional
+WarehouseEmulationModel.pre_network_loss_func = 'KL'
+WarehouseEmulationModel.pre_network_loss_weight = 1
+WarehouseEmulationModel.pre_network_type = @WarehouseAugResnetRepairedMapAndOccupancy
+WarehouseEmulationModel.pre_repair_network_loss_func = 'ce'
+WarehouseEmulationModel.prediction_type = 'regression'
+WarehouseEmulationModel.train_batch_size = 64
+WarehouseEmulationModel.train_epochs = 20
+WarehouseEmulationModel.train_sample_size = 20000
+
+# Parameters for WarehouseManager:
+# ======================================================================================================================
+WarehouseManager.agent_num = 90
+WarehouseManager.lvl_height = 17
+WarehouseManager.lvl_width = 12
+WarehouseManager.max_n_shelf = %max_n_shelf
+WarehouseManager.min_n_shelf = %min_n_shelf
+WarehouseManager.n_endpt = 2
+WarehouseManager.n_evals = 5
+WarehouseManager.num_objects = %num_objects
+WarehouseManager.w_mode = True

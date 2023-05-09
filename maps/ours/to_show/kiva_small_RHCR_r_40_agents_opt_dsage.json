@@ -1,0 +1,28 @@
+{
+    "name": "kiva_small_RHCR_r_40_agents_opt_dsage",
+    "weight": false,
+    "n_row": 17,
+    "n_col": 20,
+    "n_endpoint": 44,
+    "n_agent_loc": 0,
+    "maxtime": 5000,
+    "layout": [
+        "....................",
+        ".rrrrrrrr..rrrrrrrr.",
+        ".rrrrrrrr..rrrrrrrr.",
+        "....................",
+        "....@e..eee@.@e.....",
+        ".rr.ee.e@@ee.e...rr.",
+        ".rr..@e.ee..e@e..rr.",
+        ".rr.e...ee..e@e@.rr.",
+        "....@e.e@@e..e.e....",
+        ".rr.e...ee.....e.rr.",
+        ".rr.ee.ee...ee.@.rr.",
+        ".rr.@@.@@e..@@.e.rr.",
+        "....ee.e....eee@....",
+        "....................",
+        ".rrrrrrrr..rrrrrrrr.",
+        ".rrrrrrrr..rrrrrrrr.",
+        "...................."
+    ]
+}

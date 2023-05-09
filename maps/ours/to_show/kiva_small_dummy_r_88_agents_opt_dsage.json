@@ -1,0 +1,28 @@
+{
+    "name": "kiva_small_dummy_r_88_agents_opt_dsage",
+    "weight": false,
+    "n_row": 17,
+    "n_col": 20,
+    "n_endpoint": 39,
+    "n_agent_loc": 0,
+    "maxtime": 5000,
+    "layout": [
+        "....................",
+        ".rrrrrrrr..rrrrrrrr.",
+        ".rrrrrrrr..rrrrrrrr.",
+        "....................",
+        "....e@ee@ee@eeee....",
+        ".rr.eee.e...e@@@.rr.",
+        ".rr.@.@.......ee.rr.",
+        ".rr.e.e........@.rr.",
+        "....e..........e....",
+        ".rr.@.........ee.rr.",
+        ".rr.ee.....e.e@@.rr.",
+        ".rr.e@ee@e.@.e@e.rr.",
+        "....e@ee@e@e.e@e....",
+        "....................",
+        ".rrrrrrrr..rrrrrrrr.",
+        ".rrrrrrrr..rrrrrrrr.",
+        "...................."
+    ]
+}

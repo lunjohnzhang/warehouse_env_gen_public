@@ -1,0 +1,28 @@
+{
+    "name": "kiva_small_RHCR_r_88_agents_opt_me",
+    "weight": false,
+    "n_row": 17,
+    "n_col": 20,
+    "n_endpoint": 35,
+    "n_agent_loc": 0,
+    "maxtime": 5000,
+    "layout": [
+        "....................",
+        ".rrrrrrrr..rrrrrrrr.",
+        ".rrrrrrrr..rrrrrrrr.",
+        "....................",
+        "....e@e.@e....e@....",
+        ".rr.e...ee.....e.rr.",
+        ".rr.@...e@..e@ee.rr.",
+        ".rr.e@.......@e@.rr.",
+        "....@e......ee.e....",
+        ".rr.e@e.....@e...rr.",
+        ".rr.e@e.....@e.e.rr.",
+        ".rr.@@e@e.e.e..@.rr.",
+        "....ee...e@.e@ee....",
+        "....................",
+        ".rrrrrrrr..rrrrrrrr.",
+        ".rrrrrrrr..rrrrrrrr.",
+        "...................."
+    ]
+}

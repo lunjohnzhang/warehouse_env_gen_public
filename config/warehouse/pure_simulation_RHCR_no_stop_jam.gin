@@ -1,0 +1,3 @@
+include "config/warehouse/pure_simulation_RHCR.gin"
+
+WarehouseConfig.stop_at_traffic_jam=False

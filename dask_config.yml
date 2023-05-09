@@ -1,0 +1,42 @@
+# See https://github.com/dask/distributed/blob/main/distributed/distributed.yaml
+distributed:
+  worker:
+    # See https://distributed.dask.org/en/latest/worker.html#memory-management
+    memory:
+      rebalance:
+        measure: managed_in_memory
+      spill: false
+      pause: false
+      terminate: false
+
+  scheduler:
+    allowed-failures: 10     # number of retries before a task is considered bad
+#     bandwidth: 100000000    # 100 MB/s estimated worker-worker bandwidth
+#     blocked-handlers: []
+#     default-data-size: 1000
+#     # Number of seconds to wait until workers or clients are removed from the events log
+#     # after they have been removed from the scheduler
+    events-cleanup-delay: 1h
+#     idle-timeout: null      # Shut down after this duration, like "1h" or "30 minutes"
+#     transition-log-length: 100000
+#     work-stealing: True     # workers should steal tasks from each other
+    worker-ttl: 6000s          # like '60s'. Time to live for workers.  They must heartbeat faster than this
+
+  comm:
+    timeouts:
+      # Extended time before connection to worker fails.
+      connect: 3600s
+      # Extended time before calling an unresponsive connection dead.
+      tcp: 3600s
+
+  admin:
+    tick:
+      # Default time between event loop health checks.
+      interval: 20ms
+      # Extended time before triggering warning about unresponsive worker.
+      limit: 3h
+
+    max-error-length: 10000 # Maximum size traceback after error to return
+    log-length: 10000  # default length of logs to keep in memory
+    log-format: '%(name)s - %(levelname)s - %(message)s'
+    pdb-on-err: False       # enter debug mode on scheduling error

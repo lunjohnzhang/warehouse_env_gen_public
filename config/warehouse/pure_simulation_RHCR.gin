@@ -1,0 +1,32 @@
+# ## WarehouseConfig ##
+WarehouseConfig.scenario="KIVA"             # scenario (SORTING, KIVA, ONLINE, BEE)
+WarehouseConfig.task=""                     # input task file
+WarehouseConfig.cutoffTime=60               # cutoff time (seconds)
+WarehouseConfig.screen=0                    # screen option (0: none; 1: results; 2:all)
+WarehouseConfig.solver="PBS"                # solver (LRA, PBS, WHCA, ECBS)
+WarehouseConfig.id=False                    # independence detection
+WarehouseConfig.single_agent_solver="SIPP"  # single-agent solver (ASTAR, SIPP)
+WarehouseConfig.lazyP=False                 # use lazy priority
+WarehouseConfig.simulation_time=5000        # run simulation
+WarehouseConfig.simulation_window=5         # call the planner every simulation_window timesteps
+WarehouseConfig.travel_time_window=0        # consider the traffic jams within the given window
+WarehouseConfig.planning_window=10          # the planner outputs plans with first
+                                          # planning_window timesteps collision-free
+WarehouseConfig.potential_function="NONE"   # potential function (NONE, SOC, IC)
+WarehouseConfig.potential_threshold=0       # potential threshold
+WarehouseConfig.rotation=False              # consider rotation
+WarehouseConfig.robust=0                    # k-robust (for now, only work for PBS)
+WarehouseConfig.CAT=False                   # use conflict-avoidance table
+WarehouseConfig.hold_endpoints=False        # Hold endpoints from Ma et al, AAMAS 2017
+WarehouseConfig.dummy_paths=False           # Find dummy paths from Liu et al, AAMAS 2019
+WarehouseConfig.prioritize_start=True       # Prioritize waiting at start locations
+WarehouseConfig.suboptimal_bound=1          # Suboptimal bound for ECBS
+WarehouseConfig.log=False                   # save the search trees (and the priority trees)
+WarehouseConfig.aggregation_type = "mean"
+WarehouseConfig.measure_names = ["tile_usage_std", "all_task_len_mean"]
+WarehouseConfig.test=False
+WarehouseConfig.use_warm_up=True
+WarehouseConfig.save_result=False
+WarehouseConfig.save_solver=False
+WarehouseConfig.save_heuristics_table=False
+WarehouseConfig.stop_at_traffic_jam=True

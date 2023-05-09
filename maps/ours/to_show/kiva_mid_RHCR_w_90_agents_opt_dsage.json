@@ -1,0 +1,28 @@
+{
+    "name": "kiva_mid_RHCR_w_90_agents_opt_dsage",
+    "weight": false,
+    "n_row": 17,
+    "n_col": 16,
+    "n_endpoint": 80,
+    "n_agent_loc": 0,
+    "maxtime": 5000,
+    "layout": [
+        "...e@@e@e@e@e@..",
+        "w...ee.....e.e.w",
+        "....@.eeeee.e...",
+        "....ee@@@@@e@...",
+        "w.e@eeeeeeee...w",
+        "...e.@.e..e@e...",
+        ".....ee@.ee..e..",
+        "w......ee@@ee@.w",
+        "...e.e.@..e.....",
+        "...@e@.e.e..e...",
+        "w...e@...@ee@..w",
+        "...e.e...@e.....",
+        "..e@ee...e.eee..",
+        "w..e.@ee.e@@@@.w",
+        "....e@e@e.eeee..",
+        "...e.e.e..@@ee..",
+        "..e@.@e...e.e@.."
+    ]
+}

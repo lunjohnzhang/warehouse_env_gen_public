@@ -1,0 +1,10 @@
+include "config/warehouse/base.gin"
+
+experiment.name = "Warehouse Generation"
+Manager.is_em = False
+
+Manager.emitter_types = [(@RandomEmitter, 5)]
+
+RandomEmitter.batch_size = 2
+RandomEmitter.num_objects = %num_objects
+RandomEmitter.p_obstacle = 0.15

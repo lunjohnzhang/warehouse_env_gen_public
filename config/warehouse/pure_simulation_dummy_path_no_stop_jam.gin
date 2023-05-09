@@ -1,0 +1,3 @@
+include "config/warehouse/pure_simulation_dummy_path.gin"
+
+WarehouseConfig.stop_at_traffic_jam=False

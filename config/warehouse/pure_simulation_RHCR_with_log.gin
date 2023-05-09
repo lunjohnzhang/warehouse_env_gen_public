@@ -1,0 +1,5 @@
+include "config/warehouse/pure_simulation_RHCR.gin"
+
+WarehouseConfig.save_result=True
+WarehouseConfig.save_solver=True
+WarehouseConfig.save_heuristics_table=True

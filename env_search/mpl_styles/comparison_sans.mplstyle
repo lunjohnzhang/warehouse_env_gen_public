@@ -1,0 +1,37 @@
+# Same as simple.mplstyle but with Sans Serif fonts.
+
+font.family: Open Sans
+font.size: 16
+font.weight: light
+axes.titleweight: light
+axes.labelweight: light
+figure.titleweight: light
+mathtext.fontset: cm
+
+axes.titlesize: medium
+
+# See https://personal.sron.nl/~pault/ for more accessible color schemes.
+axes.facecolor: white
+axes.prop_cycle: cycler('color',['77AADD', 'EE8866', '44BB99', 'FFAABB', '99DDFF', 'BBCC33', 'EEDD88', 'AAAA00'])
+axes.linewidth: 0.0
+axes.grid: True
+
+xtick.major.width: 1.0
+xtick.minor.width: 1.0
+ytick.major.width: 1.0
+ytick.minor.width: 1.0
+
+xtick.direction: out
+ytick.direction: out
+
+lines.linewidth: 1.5
+
+grid.color: 0.9
+grid.linestyle: -
+grid.linewidth: 1.0
+
+legend.fancybox: False
+legend.frameon: False
+legend.borderpad: 0.5
+legend.edgecolor: 0.9
+legend.loc: best

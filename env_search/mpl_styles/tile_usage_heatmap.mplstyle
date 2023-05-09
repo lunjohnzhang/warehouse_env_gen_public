@@ -1,0 +1,23 @@
+# Style for heatmaps.
+
+font.family: Times New Roman
+mathtext.fontset: cm
+
+axes.facecolor: white
+axes.linewidth: 0.5
+axes.grid: False
+
+# Same as axes.linewidth above
+xtick.major.width: 0.5
+xtick.minor.width: 0.5
+ytick.major.width: 0.5
+ytick.minor.width: 0.5
+
+xtick.direction: out
+ytick.direction: out
+
+lines.linewidth: 1
+
+legend.fancybox: False
+legend.frameon: True
+legend.loc: best
