@@ -1,6 +1,6 @@
 # Multi-Robot Coordination and Layout Design for Automated Warehousing
 
-This repository is the official implementation of **Multi-Robot Coordination and Layout Design for Automated Warehousing** published in IJCAI 2023. The repository builds on top of the repositories of [Deep Surrogate Assisted Generation of Environment (DSAGE)](https://github.com/icaros-usc/dsage) and [Rolling-Horizon Collision Resolution (RHCR)](https://github.com/Jiaoyang-Li/RHCR).
+This repository is the official implementation of **[Multi-Robot Coordination and Layout Design for Automated Warehousing](https://arxiv.org/abs/2305.06436)** published in IJCAI 2023. The repository builds on top of the repositories of [Deep Surrogate Assisted Generation of Environment (DSAGE)](https://github.com/icaros-usc/dsage) and [Rolling-Horizon Collision Resolution (RHCR)](https://github.com/Jiaoyang-Li/RHCR).
 
 ## Installation
 
